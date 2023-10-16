@@ -1,4 +1,4 @@
- DEWIMIRANDA & MELVIA AQILA
+ DEWI MIRANDA & MELVIA AQILA
 
 1. SELECT employee.*,jobs.*
 FROM employee JOIN jobs
