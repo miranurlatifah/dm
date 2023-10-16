@@ -1,0 +1,43 @@
+ DEWIMIRANDA & MELVIA AQILA
+
+1. SELECT employee.*,jobs.*
+FROM employee JOIN jobs
+ON employee.id_job = jobs.id_job
+WHERE NOT employee.id_job ="";
+
+
+2. SELECT employee.full_name, employee.id_job
+FROM employee
+LEFT JOIN jobs ON employee.id_job =jobs.id_job
+WHERE employee.id_job IS NULL;
+
+
+3. SELECT employee.*,jobs.*
+FROM employee RIGHT JOIN jobs
+ON employee.id_job = jobs.id_job
+WHERE employee.id_job IS NULL;
+
+
+4.SELECT employee.*,jobs.*
+FROM employee LEFT JOIN jobs
+ON employee.id_job =jobs.id_job
+WHERE employee.gender !="F" ORDER BY employee.date_birth ASC;
+
+
+5.SELECT employee.*,jobs.*
+FROM employee LEFT JOIN jobs
+ON employee.id_job = jobs.id_job
+WHERE employee.gender !="M" and employee.place_birth =("Bandung" OR employee.place_birth ="Jakarta")
+ORDER BY employee.date_birth DESC
+
+
+6. SELECT jobs.name_jobs,COUNT( employee.id_emplo)
+FROM employee right JOIN jobs
+ON employee.id_job = jobs.id_job
+GROUP BY jobs.name_jobs;
+
+
+7.SELECT employee.full_name, employee.date_birth
+FROM employee
+LEFT JOIN jobs ON employee.id_job = jobs.id_job
+WHERE employee.date_birth BETWEEN '1999-01-01' AND '2001-12-31'; 
